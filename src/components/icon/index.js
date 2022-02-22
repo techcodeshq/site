@@ -8,6 +8,7 @@ import IconGithub from "./github";
 import IconYoutube from "./youtube";
 import IconMoon from "./moon";
 import IconSun from "./sun";
+import IconClose from "./close";
 
 const Icon = ({ name }) => {
   switch (name) {
@@ -27,6 +28,8 @@ const Icon = ({ name }) => {
       return <IconSun />;
     case "moon":
       return <IconMoon />;
+    case "close":
+      return <IconClose />;
     default:
       return null;
   }

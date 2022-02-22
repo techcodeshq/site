@@ -4,13 +4,12 @@ import { media } from "@styles";
 export const PageFill = styled.div`
   width: 100vw;
   height: 100vh;
-  background-color: ${props =>
-    props.colorMode === "light" ? `rgba(238, 238, 238, 0.7)` : `rgba(29, 29, 29, 0.7)`};
+  background-color: rgba(29, 29, 29, 0.7);
   backdrop-filter: saturate(180%);
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 996;
 `;
 export const SlideOver = styled.aside`
   position: absolute;
@@ -21,7 +20,7 @@ export const SlideOver = styled.aside`
   height: 100vh;
   top: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 997;
   white-space: nowrap;
   opacity: 0;
   ${media.tablet`width: 100vw;`};

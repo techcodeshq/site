@@ -84,9 +84,6 @@ const GlobalStyle = createGlobalStyle`
   }
   main {
     position: relative;
-    padding-top: 10rem;
-    
-    ${media.tablet`padding-top: 14rem;`};
   }
   p {
     line-height: 160%;

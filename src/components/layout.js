@@ -41,12 +41,12 @@ const Layout = ({ children, location }) => {
             <Head metadata={site.site.siteMetadata} />
             <SmoothScroll callbacks={location} />
 
-              <GlobalStyle />
-              <div id="___sticky">
-                <Nav />
-                <main>{children}</main>
-                <Footer data={doc.node} />
-              </div>
+            <GlobalStyle />
+            <div id="___sticky">
+              <Nav location={location} />
+              <main>{children}</main>
+              <Footer data={doc.node} />
+            </div>
           </>
         );
       }}

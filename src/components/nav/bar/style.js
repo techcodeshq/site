@@ -6,7 +6,7 @@ export const HeadStickWrapper = styled.header`
   width: 100%;
   display: block;
   position: fixed;
-  z-index: 999;
+  z-index: 996;
 `;
 export const RightSideWrapper = styled.div`
   display: flex;
@@ -142,7 +142,7 @@ export const BtnMenuBox = styled.span`
   display: inline-block;
   width: 25px;
   vertical-align: middle;
-  z-index: 1001;
+  z-index: 998;
   span {
     position: relative;
     display: block;

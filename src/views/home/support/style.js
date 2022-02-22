@@ -33,10 +33,10 @@ export const CardTitle = styled(BigText)`
   margin: 0;
   max-width: 75%;
 
-  ${props => props.index == 1 && `color: var(--green);`};
-  ${props => props.index == 2 && `color: var(--red);`};
-  ${props => props.index == 3 && `color: var(--blue);`};
-  ${props => props.index == 4 && `color: var(--purple);`};
+  ${props => props.index === 1 && `color: var(--green);`};
+  ${props => props.index === 2 && `color: var(--red);`};
+  ${props => props.index === 3 && `color: var(--blue);`};
+  ${props => props.index === 4 && `color: var(--purple);`};
   ${media.thone`max-width: 100%;`};
 `;
 export const CardText = styled(SmallText)`

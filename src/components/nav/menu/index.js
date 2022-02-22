@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { Power4, gsap } from "gsap";
-import { ThemeToggler } from "gatsby-plugin-dark-mode";
 import { MovingLink, OutsideMovingLink, UnderlineLink, SOCIALS } from "@components";
 import {
   PageFill,
@@ -16,7 +15,7 @@ import {
   SocialWrapper,
 } from "./style";
 
-const Menu = ({ menuOpen, toggleMenu }) => {
+const Menu = ({ menuOpen, toggleMenu, location }) => {
   let popOver = useRef(null);
   let popOverBody = useRef(null);
   let backdrop = useRef(null);
@@ -67,7 +66,7 @@ const Menu = ({ menuOpen, toggleMenu }) => {
           "-=1",
         );
     }
-  }, [menuOpen]);
+  }, [menuOpen, location]);
 
   useEffect(() => {
     if (menuOpen) {
@@ -83,11 +82,7 @@ const Menu = ({ menuOpen, toggleMenu }) => {
 
   return (
     <>
-      <ThemeToggler>
-        {({ theme }) => (
-          <PageFill colorMode={theme} ref={el => (backdrop = el)} onClick={toggleMenu} />
-        )}
-      </ThemeToggler>
+      <PageFill ref={el => (backdrop = el)} onClick={toggleMenu} />
 
       <SlideOver ref={el => (popOver = el)}>
         <SlideContainer ref={el => (popOverBody = el)}>
@@ -117,21 +112,20 @@ const Menu = ({ menuOpen, toggleMenu }) => {
                 <NavLabel>Menu</NavLabel>
                 <NavList>
                   <NavItem>
-                    <MovingLink to="/about" text="About" />
+                    <MovingLink onClick={toggleMenu} to="/about" text="About" />
                   </NavItem>
                   <NavItem>
-                    <MovingLink to="/volunteer" text="Volunteer" />
+                    <MovingLink onClick={toggleMenu} to="/volunteer" text="Volunteer" />
                   </NavItem>
                   <NavItem>
-                    <MovingLink to="/partner" text="Partner" />
+                    <MovingLink onClick={toggleMenu} to="/partner" text="Partner" />
                   </NavItem>
                   <NavItem>
-                    <MovingLink to="/initiatives" text="Initiatives" />
+                    <MovingLink onClick={toggleMenu} to="/initiatives" text="Initiatives" />
                   </NavItem>
                   <NavItem>
-                    <MovingLink to="/contact" text="Contact" />
+                    <MovingLink onClick={toggleMenu} to="/contact" text="Contact" />
                   </NavItem>
-                  <NavItem></NavItem>
                 </NavList>
               </ColWrapper>
             </InnerBody>

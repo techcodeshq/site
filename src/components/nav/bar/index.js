@@ -11,7 +11,7 @@ import {
   RightSideWrapper,
 } from "./style";
 
-const Bar = () => {
+const Bar = ({ location }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   function toggleMenu() {
@@ -53,7 +53,7 @@ const Bar = () => {
               </BtnMenuBox>
             </MenuButton>
           </RightSideWrapper>
-          <Menu menuOpen={menuOpen} toggleMenu={toggleMenu} />
+          <Menu menuOpen={menuOpen} toggleMenu={toggleMenu} location={location} />
         </NavWrapper>
       </Container>
     </HeadStickWrapper>
