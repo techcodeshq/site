@@ -10,9 +10,9 @@ export const HeroWrapper = styled.section`
 
   ${media.thone`
     h1 {
-      text-align: left
+      text-align: left;
     }
-  ;`};
+  `};
 `;
 export const ImageWrapper = styled.div`
   width: 100vw;
@@ -21,6 +21,6 @@ export const ImageWrapper = styled.div`
 `;
 export const HeroImage = styled(GatsbyImage)`
   border-radius: inherit;
-  width: inherit;
-  height: inherit;
+  width: 100%;
+  height: 100%;
 `;

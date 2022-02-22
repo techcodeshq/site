@@ -55,7 +55,7 @@ export const COLORS = {
     light: "#B83BF3",
     dark: "#BC51EF",
   },
-  lighpurple: {
+  lightpurple: {
     light: "#E9BBFF",
     dark: "#AC64CE",
   },

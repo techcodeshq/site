@@ -27,6 +27,7 @@ export const RightSideWrapper = styled.div`
       padding: 1.4vw 4vw;
       margin-right: 4vw;
     `};
+    ${media.phone`font-size: 3.5vw;`};
   }
 `;
 export const NavWrapper = styled.nav`

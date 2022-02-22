@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { CTA } from "@views";
 import { Hero, About, Transition, Info, Support } from "@views/home";
 
 const HomePage = ({ data }) => {
@@ -12,6 +13,7 @@ const HomePage = ({ data }) => {
       <Transition data={doc.node} />
       <Info data={doc.node} />
       <Support data={doc.node} />
+      {doc.node.CTA && <CTA data={doc.node} />}
     </>
   );
 };
@@ -48,6 +50,13 @@ export const query = graphql`
           support_cards {
             support_title
             support_description
+          }
+          CTA {
+            logos {
+              localFile {
+                url
+              }
+            }
           }
         }
       }

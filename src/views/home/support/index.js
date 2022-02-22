@@ -7,7 +7,7 @@ import {
   CardTitle,
   CardText,
 } from "./style";
-import { Container, BigText, Label, NormalText, MidText } from "@styles";
+import { Container, Label, NormalText, MidText } from "@styles";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ReactMarkdown from "react-markdown";
 

@@ -13,6 +13,7 @@ const ButtonStyle = css`
 `;
 const ButtonWrapper = styled.div`
   position: relative;
+  width: fit-content;
 `;
 const ExternalButton = styled.a`
   ${ButtonStyle};

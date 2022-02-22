@@ -27,6 +27,10 @@ export const BigText = styled.p`
     background-color: var(--lightgreen);
   }
 
+  span.purple {
+    background-color: var(--lightpurple);
+  }
+
   ${media.thone`font-size: 8vw;`};
 `;
 export const MidText = styled.p`

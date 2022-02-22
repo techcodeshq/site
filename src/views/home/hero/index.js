@@ -13,14 +13,14 @@ const Hero = ({ data }) => {
   useEffect(() => {
     const br = gsap
       .timeline({ defaults: { ease: "none" } })
-      .to(heroImage, { borderRadius: 75, width: "92.8%" });
+      .fromTo(heroImage, { borderRadius: 0, width: "100%" }, { borderRadius: 75, width: "92.8%" });
 
     ScrollTrigger.create({
       trigger: sectionContainer,
       scroller: "#___gatsby",
       animation: br,
       start: "top+=50% center",
-      end: "bottom-=5% center",
+      end: "bottom center",
       scrub: true,
     });
 
