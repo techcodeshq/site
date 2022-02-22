@@ -1,17 +1,16 @@
 import React from "react";
-import { Button, ThemeContext } from "@components";
+import { Button } from "@components";
+import { ThemeToggler } from "gatsby-plugin-dark-mode";
 import { TransitionWrapper, OverLay, ButtonWrapper, ImageWrap } from "./style";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 const Transition = ({ data }) => {
-  const { colorMode } = React.useContext(ThemeContext);
-
   return (
     <TransitionWrapper>
       <ButtonWrapper>
         <Button to="/about">Explore our events</Button>
       </ButtonWrapper>
-      <OverLay colorMode={colorMode} />
+      <ThemeToggler>{({ theme }) => <OverLay colorMode={theme} />}</ThemeToggler>
       <ImageWrap>
         <div data-scroll data-scroll-speed={-1}>
           <GatsbyImage

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-import { Head, ThemeProvider, Nav, SmoothScroll } from "@components";
+import { Head, Nav, SmoothScroll } from "@components";
 import { Footer } from "@views";
 import { GlobalStyle } from "@styles";
 
@@ -41,14 +41,12 @@ const Layout = ({ children, location }) => {
             <Head metadata={site.site.siteMetadata} />
             <SmoothScroll callbacks={location} />
 
-            <ThemeProvider>
               <GlobalStyle />
               <div id="___sticky">
                 <Nav />
                 <main>{children}</main>
                 <Footer data={doc.node} />
               </div>
-            </ThemeProvider>
           </>
         );
       }}

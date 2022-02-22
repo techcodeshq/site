@@ -42,6 +42,45 @@ const GlobalStyle = createGlobalStyle`
     color: var(--text);
     font-family: var(--font-family);
     overscroll-behavior-y: none;
+
+    --text: #1D1D1D;
+    --background: #FDFDFD;
+    --alwayswhite: #F3F2F2;
+    --foreground: #F5F4FF;
+    --theme: #5552E6;
+    --accent: #F9F9F9;
+    --green: #58C056;
+    --darkgreen: #1A5910;
+    --lightgreen: #ACFFB4;
+    --darkorange: #3A291C;
+    --orange: #FFB775;
+    --red: #E24D4D;
+    --blue: #386AEA;
+    --deepBlue: #140C63;
+    --purple: #B83BF3;
+    --lightpurple: #E9BBFF;
+    --undertone: #161616;
+    --gray: #B4B4B4;
+  }
+  body.dark {
+    --text: #F3F2F2;
+    --background: #1D1D1D;
+    --alwayswhite: #F3F2F2;
+    --foreground: #151515;
+    --theme: #5552E6;
+    --accent: #2B2B2B;
+    --green: #6BF068;
+    --darkgreen: #1A5910;
+    --lightgreen: #ACFFB4;
+    --darkorange: #3A291C;
+    --orange: #FFB775;
+    --red: #FB4343;
+    --blue: #5080FD;
+    --deepBlue: #CCC7F6;
+    --purple: #BC51EF;
+    --lightpurple: #AC64CE;
+    --undertone: #E4E4E4;
+    --gray: #B4B4B4;
   }
   main {
     position: relative;

@@ -69,7 +69,7 @@ export const COLORS = {
   },
   gray: {
     light: "#B4B4B4",
-    dark: "#323232",
+    dark: "#B4B4B4",
   },
 };
 

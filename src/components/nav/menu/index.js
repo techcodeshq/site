@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Power4, gsap } from "gsap";
-import { MovingLink, OutsideMovingLink, UnderlineLink, SOCIALS, ThemeContext } from "@components";
+import { ThemeToggler } from "gatsby-plugin-dark-mode";
+import { MovingLink, OutsideMovingLink, UnderlineLink, SOCIALS } from "@components";
 import {
   PageFill,
   SlideOver,
@@ -19,7 +20,6 @@ const Menu = ({ menuOpen, toggleMenu }) => {
   let popOver = useRef(null);
   let popOverBody = useRef(null);
   let backdrop = useRef(null);
-  const { colorMode } = React.useContext(ThemeContext);
 
   useEffect(() => {
     let tl = gsap.timeline();
@@ -83,7 +83,11 @@ const Menu = ({ menuOpen, toggleMenu }) => {
 
   return (
     <>
-      <PageFill colorMode={colorMode} ref={el => (backdrop = el)} onClick={toggleMenu} />
+      <ThemeToggler>
+        {({ theme }) => (
+          <PageFill colorMode={theme} ref={el => (backdrop = el)} onClick={toggleMenu} />
+        )}
+      </ThemeToggler>
 
       <SlideOver ref={el => (popOver = el)}>
         <SlideContainer ref={el => (popOverBody = el)}>

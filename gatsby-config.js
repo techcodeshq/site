@@ -18,6 +18,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-dark-mode`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import { Icon, UnderlineLink, SOCIALS, ThemeContext } from "@components";
+import { Icon, UnderlineLink, SOCIALS } from "@components";
+import { ThemeToggler } from "gatsby-plugin-dark-mode";
 import { Container } from "@styles";
 import { Link } from "gatsby";
 import {
@@ -24,8 +25,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Footer = ({ data }) => {
   let footerContainer = useRef(null);
-  const { colorMode, setColorMode } = React.useContext(ThemeContext);
-
+  
   useEffect(() => {
     const uncover = gsap
       .timeline({ defaults: { ease: "none" } })
@@ -55,18 +55,22 @@ const Footer = ({ data }) => {
           <Col>
             <ColContainer logo>
               <Icon name="logo" />
-              <TogglerWrapper>
-                <label>
-                  <input
-                    type="checkbox"
-                    onChange={ev => {
-                      setColorMode(ev.target.checked ? "dark" : "light");
-                    }}
-                    checked={colorMode === "dark"}
-                  />
-                  {colorMode === "dark" ? <Icon name="sun" /> : <Icon name="moon" />}
-                </label>
-              </TogglerWrapper>
+              <ThemeToggler>
+                {({ theme, toggleTheme }) => (
+                  <TogglerWrapper>
+                    <label>
+                      <input
+                        type="checkbox"
+                        onChange={ev => {
+                          toggleTheme(ev.target.checked ? "dark" : "light");
+                        }}
+                        checked={theme === "dark"}
+                      />
+                      {theme === "dark" ? <Icon name="sun" /> : <Icon name="moon" />}
+                    </label>
+                  </TogglerWrapper>
+                )}
+              </ThemeToggler>
             </ColContainer>
             <FooterText>{data.footer.small_text}</FooterText>
             <UnderlineLink href={data.footer.press_release.localFile.url}>
