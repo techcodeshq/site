@@ -7,6 +7,10 @@ export const COLORS = {
     light: "#FDFDFD",
     dark: "#1D1D1D",
   },
+  alwayswhite: {
+    light: "#F3F2F2",
+    dark: "#F3F2F2",
+  },
   foreground: {
     light: "#F5F4FF",
     dark: "#151515",

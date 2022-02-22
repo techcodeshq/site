@@ -13,6 +13,7 @@ export const ColContainer = styled.div`
   display: flex;
   width: 100%;
 
+  ${props => props.logo && `align-items: center;`}
   ${props => props.social && media.thone`flex-direction: column;`};
 `;
 export const LinkContainer = styled(ColContainer)`
@@ -152,5 +153,19 @@ export const CreditsLink = styled(NormalText)`
     :hover {
       text-decoration: underline;
     }
+  }
+`;
+export const TogglerWrapper = styled.div`
+  label {
+    cursor: pointer;
+    input {
+      display: none;
+    }
+    padding-left: 2rem;
+  }
+  svg {
+    width: 2rem;
+    height: 2rem;
+    color: var(--text);
   }
 `;

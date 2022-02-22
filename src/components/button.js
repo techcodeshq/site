@@ -8,7 +8,7 @@ const ButtonStyle = css`
   font-weight: inherit;
   padding: 1vw 1.6vw;
   background-color: var(--theme);
-  color: var(--background);
+  color: var(--alwayswhite);
   border-radius: 35px;
 `;
 const ButtonWrapper = styled.div`

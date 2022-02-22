@@ -6,6 +6,8 @@ import IconInstagram from "./instagram";
 import IconTwitter from "./twitter";
 import IconGithub from "./github";
 import IconYoutube from "./youtube";
+import IconMoon from "./moon";
+import IconSun from "./sun";
 
 const Icon = ({ name }) => {
   switch (name) {
@@ -21,6 +23,10 @@ const Icon = ({ name }) => {
       return <IconGithub />;
     case "youtube":
       return <IconYoutube />;
+    case "sun":
+      return <IconSun />;
+    case "moon":
+      return <IconMoon />;
     default:
       return null;
   }

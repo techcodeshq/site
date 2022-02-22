@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Icon, UnderlineLink, SOCIALS } from "@components";
+import { Icon, UnderlineLink, SOCIALS, ThemeContext } from "@components";
 import { Container } from "@styles";
 import { Link } from "gatsby";
 import {
@@ -15,6 +15,7 @@ import {
   Socials,
   CreditWrapper,
   CreditsLink,
+  TogglerWrapper,
 } from "./style";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -23,6 +24,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Footer = ({ data }) => {
   let footerContainer = useRef(null);
+  const { colorMode, setColorMode } = React.useContext(ThemeContext);
 
   useEffect(() => {
     const uncover = gsap
@@ -51,7 +53,21 @@ const Footer = ({ data }) => {
       <Container ref={el => (footerContainer = el)}>
         <GridContainer>
           <Col>
-            <Icon name="logo" />
+            <ColContainer logo>
+              <Icon name="logo" />
+              <TogglerWrapper>
+                <label>
+                  <input
+                    type="checkbox"
+                    onChange={ev => {
+                      setColorMode(ev.target.checked ? "dark" : "light");
+                    }}
+                    checked={colorMode === "dark"}
+                  />
+                  {colorMode === "dark" ? <Icon name="sun" /> : <Icon name="moon" />}
+                </label>
+              </TogglerWrapper>
+            </ColContainer>
             <FooterText>{data.footer.small_text}</FooterText>
             <UnderlineLink href={data.footer.press_release.localFile.url}>
               Download latest press release

@@ -43,7 +43,8 @@ export const OverLay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(238, 238, 238, 0.7);
+  background-color: ${props =>
+    props.colorMode === "light" ? `rgba(238, 238, 238, 0.7)` : `rgba(29, 29, 29, 0.7)`};
 `;
 export const ButtonWrapper = styled.div`
   position: absolute;

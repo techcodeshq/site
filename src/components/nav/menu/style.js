@@ -4,7 +4,8 @@ import { media } from "@styles";
 export const PageFill = styled.div`
   width: 100vw;
   height: 100vh;
-  background-color: rgba(238, 238, 238, 0.7);
+  background-color: ${props =>
+    props.colorMode === "light" ? `rgba(238, 238, 238, 0.7)` : `rgba(29, 29, 29, 0.7)`};
   backdrop-filter: saturate(180%);
   position: absolute;
   top: 0;

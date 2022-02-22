@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Power4, gsap } from "gsap";
-import { MovingLink, OutsideMovingLink, UnderlineLink, SOCIALS } from "@components";
+import { MovingLink, OutsideMovingLink, UnderlineLink, SOCIALS, ThemeContext } from "@components";
 import {
   PageFill,
   SlideOver,
@@ -19,6 +19,7 @@ const Menu = ({ menuOpen, toggleMenu }) => {
   let popOver = useRef(null);
   let popOverBody = useRef(null);
   let backdrop = useRef(null);
+  const { colorMode } = React.useContext(ThemeContext);
 
   useEffect(() => {
     let tl = gsap.timeline();
@@ -82,7 +83,7 @@ const Menu = ({ menuOpen, toggleMenu }) => {
 
   return (
     <>
-      <PageFill ref={el => (backdrop = el)} onClick={toggleMenu} />
+      <PageFill colorMode={colorMode} ref={el => (backdrop = el)} onClick={toggleMenu} />
 
       <SlideOver ref={el => (popOver = el)}>
         <SlideContainer ref={el => (popOverBody = el)}>
