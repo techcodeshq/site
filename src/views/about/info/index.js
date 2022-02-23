@@ -3,6 +3,7 @@ import { Container, NormalText } from "@styles";
 import { InfoSection, Card, CardGrid, CardTitle } from "./style";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import ReactMarkdown from "react-markdown";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,19 +37,11 @@ const Info = ({ data }) => {
               What <br />
               we do
             </CardTitle>
-            <NormalText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </NormalText>
+            <ReactMarkdown components={{ p: NormalText }}>{data.do_text}</ReactMarkdown>
           </Card>
           <Card>
             <CardTitle red>Our approach</CardTitle>
-            <NormalText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </NormalText>
+            <ReactMarkdown components={{ p: NormalText }}>{data.approach_text}</ReactMarkdown>
           </Card>
         </CardGrid>
       </Container>

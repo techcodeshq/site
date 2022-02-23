@@ -7,7 +7,7 @@ import { Icon } from "@components";
 const StickyWrapper = styled.div`
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
@@ -102,7 +102,7 @@ const Modal = ({ name, description, position, modalOpen, setModalOpen }) => {
           {
             yPercent: 0,
             ease: Power4.easeOut,
-            duration: 1,
+            duration: 0.6,
           },
           "-=1",
         )
@@ -112,7 +112,7 @@ const Modal = ({ name, description, position, modalOpen, setModalOpen }) => {
             autoAlpha: 1,
             backdropFilter: "blur(20px)",
             ease: Power4.easeOut,
-            duration: 0.6,
+            duration: 0.4,
           },
           "-=1",
         );
@@ -123,7 +123,7 @@ const Modal = ({ name, description, position, modalOpen, setModalOpen }) => {
           {
             yPercent: 50,
             ease: Power4.easeOut,
-            duration: 1,
+            duration: 0.6,
           },
           "-=1",
         )
@@ -133,7 +133,7 @@ const Modal = ({ name, description, position, modalOpen, setModalOpen }) => {
             backdropFilter: "blur(0px)",
             autoAlpha: 0,
             ease: Power4.easeOut,
-            duration: 0.6,
+            duration: 0.4,
           },
           "-=1",
         );
