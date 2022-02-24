@@ -27,7 +27,7 @@ export const CardGridWrap = styled.div`
   ${media.thone`
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
-    grid-gap: 4vw;
+    grid-gap: 6vw;
   `};
 `;
 export const Card = styled.div`
@@ -36,6 +36,8 @@ export const Card = styled.div`
   padding: 2vw;
   display: flex;
   transition: all 0.3s cubic-bezier(0.4, 0, 0, 1);
+
+  ${media.thone`padding: 6vw 6vw 1vw 6vw;`};
 
   :hover {
     transform: scale(1.1);
@@ -76,5 +78,6 @@ export const Number = styled.span`
     font-size: 6vw;
     width: 8vw;
     height: 8vw;
+    margin-right: 4vw;
   `};
 `;

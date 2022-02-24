@@ -5,7 +5,7 @@ export const InfoSection = styled.section`
   overflow: hidden;
   padding: 10vw 0;
 
-  ${media.thone`padding: 20vw 0;`};
+  ${media.thone`padding: 60vw 0 20vw 0;`};
 `;
 export const Card = styled.div`
   background-color: var(--accent);

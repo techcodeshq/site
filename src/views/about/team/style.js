@@ -20,6 +20,8 @@ export const SectionTitle = styled(TitleText)`
   color: var(--blue);
   margin-top: 1vw;
   margin-bottom: 1.4vw;
+
+  ${media.thone`margin: 8vw 0 5vw;`};
 `;
 export const SectionDescription = styled(NormalText)`
   max-width: 75%;
@@ -43,7 +45,11 @@ export const DirectorGrid = styled.div`
   grid-gap: 4vw;
   margin-top: 6vw;
 
-  ${media.thone`grid-template-columns: repeat(1, 1fr);`};
+  ${media.thone`
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 8vw;
+    grid-gap: 8vw;
+  `};
 `;
 export const HoverWrapper = styled.div`
   position: absolute;

@@ -25,6 +25,8 @@ export const RightCol = styled.div`
 `;
 export const AboutText = styled(BigText)`
   margin: 0;
+
+  ${media.thone`margin: 8vw 0 5vw;`};
 `;
 export const LinksWrapper = styled.div`
   width: fit-content;
@@ -40,7 +42,7 @@ export const LinksWrapper = styled.div`
     ${media.tablet`font-size: 2vw;`};
     ${media.thone`
       font-size: 4vw;
-      margin-top: 2.6vw;
+      margin-top: 4vw;
     `};
   }
 `;

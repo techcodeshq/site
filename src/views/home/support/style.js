@@ -6,6 +6,8 @@ export const SupportSection = styled.section`
   padding: 5vw 0;
   background-color: var(--accent);
 
+  ${media.thone`padding: 10vw 0;`};
+
   .swiper {
     width: 100%;
     padding-left: 7vw;
@@ -17,7 +19,10 @@ export const SupportTitle = styled(BigText)`
   margin: 2vw 0 0 0;
 
   ${props => props.noMargin && `margin: 0;`};
-  ${media.thone`max-width: 100%;`};
+  ${media.thone`
+    max-width: 100%;
+    margin: 8vw 0 5vw;
+  `};
 `;
 export const DescriptionWrapper = styled.div`
   max-width: 52%;
