@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from "react";
-import { Container, TitleText } from "@styles";
-import { HeroWrapper, ImageWrapper, HeroImage } from "./style";
+import { Container, NormalText } from "@styles";
+import { LargeTitle, SectionWrapper, DescriptionWrapper, ImageWrapper, HeroImage } from "./style";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Hero = ({ data }) => {
+const Top = ({ title, description, image }) => {
   let heroImage = useRef(null);
   let sectionContainer = useRef(null);
 
@@ -29,18 +29,21 @@ const Hero = ({ data }) => {
   }, []);
 
   return (
-    <HeroWrapper ref={el => (sectionContainer = el)}>
+    <SectionWrapper ref={el => (sectionContainer = el)}>
       <Container>
-        <TitleText>{data.hero_title}</TitleText>
+        <LargeTitle>{title}</LargeTitle>
+        <DescriptionWrapper>
+          <NormalText>{description}</NormalText>
+        </DescriptionWrapper>
       </Container>
       <ImageWrapper ref={el => (heroImage = el)}>
         <HeroImage
-          image={data.hero_image.localFile.childImageSharp.gatsbyImageData}
-          alt={data.hero_image.alternativeText !== undefined && data.hero_image.alternativeText}
+          image={image.localFile.childImageSharp.gatsbyImageData}
+          alt={image.alternativeText && image.alternativeText}
         />
       </ImageWrapper>
-    </HeroWrapper>
+    </SectionWrapper>
   );
 };
 
-export default Hero;
+export default Top;

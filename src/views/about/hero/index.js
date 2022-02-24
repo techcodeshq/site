@@ -27,13 +27,13 @@ const Hero = ({ data }) => {
               <ImageOne>
                 <GatsbyImage
                   image={data.top_image_1.localFile.childImageSharp.gatsbyImageData}
-                  alt="TechCodes"
+                  alt={data.top_image_1.alternativeText && data.top_image_1.alternativeText}
                 />
               </ImageOne>
               <ImageTwo>
                 <GatsbyImage
                   image={data.top_image_2.localFile.childImageSharp.gatsbyImageData}
-                  alt="TechCodes"
+                  alt={data.top_image_2.alternativeText && data.top_image_2.alternativeText}
                 />
               </ImageTwo>
             </div>

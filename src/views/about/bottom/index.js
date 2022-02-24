@@ -10,7 +10,7 @@ const Bottom = ({ data }) => {
         <div data-scroll data-scroll-speed={-1}>
           <GatsbyImage
             image={data.footer.localFile.childImageSharp.gatsbyImageData}
-            alt="The Team"
+            alt={data.footer.alternativeText && data.footer.alternativeText}
           />
         </div>
       </ImageWrapper>

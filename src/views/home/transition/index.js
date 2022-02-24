@@ -15,7 +15,10 @@ const Transition = ({ data }) => {
         <div data-scroll data-scroll-speed={-1}>
           <GatsbyImage
             image={data.transition_image.localFile.childImageSharp.gatsbyImageData}
-            alt="TechCodes hero event"
+            alt={
+              data.transition_image.alternativeText !== undefined &&
+              data.transition_image.alternativeText
+            }
           />
         </div>
       </ImageWrap>

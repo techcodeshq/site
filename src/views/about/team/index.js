@@ -65,7 +65,10 @@ const Team = ({ data }) => {
                       About me
                     </Button>
                   </HoverWrapper>
-                  <GatsbyImage image={info.headshot.localFile.childImageSharp.gatsbyImageData} />
+                  <GatsbyImage
+                    image={info.headshot.localFile.childImageSharp.gatsbyImageData}
+                    alt={info.headshot.alternativeText && info.headshot.alternativeText}
+                  />
                 </ImageWrapper>
               );
             }
@@ -77,7 +80,10 @@ const Team = ({ data }) => {
               return (
                 <ListItemWrapper>
                   <HoverImageWrap>
-                    <GatsbyImage image={info.headshot.localFile.childImageSharp.gatsbyImageData} />
+                    <GatsbyImage
+                      image={info.headshot.localFile.childImageSharp.gatsbyImageData}
+                      alt={info.headshot.alternativeText && info.headshot.alternativeText}
+                    />
                   </HoverImageWrap>
                   <TeamMember
                     key={index}

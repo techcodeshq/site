@@ -43,6 +43,7 @@ export const query = graphql`
         node {
           hero_title
           hero_image {
+            alternativeText
             localFile {
               childImageSharp {
                 gatsbyImageData(width: 2000)
@@ -51,6 +52,7 @@ export const query = graphql`
           }
           about_description
           transition_image {
+            alternativeText
             localFile {
               childImageSharp {
                 gatsbyImageData(width: 2000)

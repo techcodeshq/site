@@ -40,6 +40,7 @@ export const query = graphql`
       edges {
         node {
           top_image_1 {
+            alternativeText
             localFile {
               childImageSharp {
                 gatsbyImageData
@@ -47,6 +48,7 @@ export const query = graphql`
             }
           }
           top_image_2 {
+            alternativeText
             localFile {
               childImageSharp {
                 gatsbyImageData
@@ -60,6 +62,7 @@ export const query = graphql`
           approach_text
           team {
             headshot {
+              alternativeText
               localFile {
                 childImageSharp {
                   gatsbyImageData
@@ -72,6 +75,7 @@ export const query = graphql`
             description
           }
           footer {
+            alternativeText
             localFile {
               childImageSharp {
                 gatsbyImageData
