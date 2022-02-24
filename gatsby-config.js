@@ -30,7 +30,7 @@ module.exports = {
       resolve: "gatsby-source-strapi",
       options: {
         apiURL: process.env.STRAPI_API_URL,
-        singleTypes: ["homepage", "about", "global", "volunteer"],
+        singleTypes: ["homepage", "about", "global", "volunteer", "partner"],
       },
     },
     {

@@ -16,13 +16,27 @@ export const SectionWrapper = styled.div`
   align-items: center;
   flex-direction: column;
 
+  a {
+    font-size: 1.5vw;
+    font-weight: 600;
+
+    ${media.tablet`font-size: 2vw;`};
+    ${media.thone`font-size: 4vw;`};
+  }
+
   ${media.tablet`padding-top: 14rem;`};
   ${media.thone`text-align: left;`};
 `;
 export const LargeTitle = styled(TitleText)`
   color: var(--deepBlue);
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 
-  ${media.thone`margin: 0;`};
+  ${media.thone`
+    margin: 0;
+    max-width: 100%;
+  `};
 `;
 export const DescriptionWrapper = styled.div`
   margin: 0 auto 6vw auto;
@@ -35,6 +49,7 @@ export const DescriptionWrapper = styled.div`
 `;
 export const ImageWrapper = styled.div`
   width: 100vw;
+  ${props => props.link !== undefined && `margin-top: 5vw;`};
 
   ${media.thone`height: 70vh;`};
 `;

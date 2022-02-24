@@ -3,10 +3,11 @@ import { Container, NormalText } from "@styles";
 import { LargeTitle, SectionWrapper, DescriptionWrapper, ImageWrapper, HeroImage } from "./style";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { Button } from "@components";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Top = ({ title, description, image }) => {
+const Top = ({ title, description, image, link, linkText }) => {
   let heroImage = useRef(null);
   let sectionContainer = useRef(null);
 
@@ -36,7 +37,12 @@ const Top = ({ title, description, image }) => {
           <NormalText>{description}</NormalText>
         </DescriptionWrapper>
       </Container>
-      <ImageWrapper ref={el => (heroImage = el)}>
+      {link && (
+        <Button href={link} style={{ marginBottom: "10vw" }}>
+          {linkText}
+        </Button>
+      )}
+      <ImageWrapper link={link} ref={el => (heroImage = el)}>
         <HeroImage
           image={image.localFile.childImageSharp.gatsbyImageData}
           alt={image.alternativeText && image.alternativeText}
