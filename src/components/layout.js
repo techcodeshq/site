@@ -45,7 +45,7 @@ const Layout = ({ children, location }) => {
             <div id="___sticky">
               <Nav location={location} />
               <main>{children}</main>
-              <Footer data={doc.node} />
+              <Footer data={doc.node} location={location} />
             </div>
           </>
         );

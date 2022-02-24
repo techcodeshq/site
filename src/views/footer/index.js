@@ -23,9 +23,9 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Footer = ({ data }) => {
+const Footer = ({ data, location }) => {
   let footerContainer = useRef(null);
-  
+
   useEffect(() => {
     const uncover = gsap
       .timeline({ defaults: { ease: "none" } })
@@ -46,7 +46,7 @@ const Footer = ({ data }) => {
       ScrollTrigger.addEventListener("refresh", () => window.scroll.update());
       ScrollTrigger.refresh();
     }, 5000);
-  }, []);
+  }, [location]);
 
   return (
     <FooterWrapper>
