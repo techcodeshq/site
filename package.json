@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.2",
+    "formik": "^2.2.9",
     "gatsby": "^4.7.1",
     "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-gatsby-cloud": "^4.7.0",
@@ -29,7 +30,8 @@
     "react-helmet": "^6.1.0",
     "react-markdown": "^8.0.0",
     "styled-components": "^5.3.3",
-    "swiper": "^8.0.6"
+    "swiper": "^8.0.6",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "prettier": "^2.5.1"

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import { Container, TitleText } from "@styles";
-import { HeroWrapper, ImageWrapper, HeroImage } from "./style";
+import { Container } from "@styles";
+import { HeroWrapper, ImageWrapper, HeroImage, HeroTitleText } from "./style";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -31,7 +31,7 @@ const Hero = ({ data }) => {
   return (
     <HeroWrapper ref={el => (sectionContainer = el)}>
       <Container>
-        <TitleText>{data.hero_title}</TitleText>
+        <HeroTitleText>{data.hero_title}</HeroTitleText>
       </Container>
       <ImageWrapper ref={el => (heroImage = el)}>
         <HeroImage

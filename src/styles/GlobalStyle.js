@@ -122,6 +122,9 @@ const GlobalStyle = createGlobalStyle`
       outline: none;
     }
   }
+  input, textarea {
+    border: none;
+  }
 `;
 
 export default GlobalStyle;

@@ -31,6 +31,7 @@ module.exports = {
       options: {
         apiURL: process.env.STRAPI_API_URL,
         singleTypes: ["homepage", "about", "global", "volunteer", "partner"],
+        collectionTypes: ["initiatives"],
       },
     },
     {
