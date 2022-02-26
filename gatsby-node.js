@@ -1,5 +1,58 @@
 const path = require("path");
 
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
+
+  const pages = await graphql(`
+    {
+      allStrapiInitiatives(sort: { fields: strapiId, order: DESC }) {
+        nodes {
+          slug
+          SEO {
+            title
+            description
+          }
+          title
+          thumbnail {
+            alternativeText
+            localFile {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+          }
+          date(formatString: "MM/DD/YY")
+          article
+        }
+      }
+      allStrapiGlobal {
+        edges {
+          node {
+            footer {
+              small_text
+              press_release {
+                localFile {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const footerDoc = pages.data.allStrapiGlobal.edges.slice(0, 1).pop();
+
+  pages.data.allStrapiInitiatives.nodes.forEach(node => {
+    createPage({
+      path: `/${node.slug}`,
+      component: path.resolve(__dirname, "src/templates/project.js"),
+      context: { project: node, footer: footerDoc.node },
+    });
+  });
+};
+
 // https://www.gatsbyjs.org/docs/node-apis/#onCreateWebpackConfig
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   actions.setWebpackConfig({
