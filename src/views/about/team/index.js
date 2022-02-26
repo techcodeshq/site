@@ -44,7 +44,7 @@ const Team = ({ data }) => {
         />
         <TitleWrapper>
           <Label onClick={() => setModalOpen(true)}>Meet the team</Label>
-          <SectionTitle>Marking it happen</SectionTitle>
+          <SectionTitle>Making it happen</SectionTitle>
           <SectionDescription>
             Our hardworking executive team. The hearts, minds, and souls behind the TechCodes
             organization changing the face of STEM.
