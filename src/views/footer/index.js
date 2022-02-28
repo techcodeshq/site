@@ -89,8 +89,18 @@ const Footer = ({ data }) => {
               </LinksListWrap>
               <LinksListWrap>
                 <LabelText>Legal</LabelText>
-                <Link to="/privacy">Privacy Policy</Link>
-                <Link to="/terms">Terms of Service</Link>
+                <a
+                  href="https://app.termly.io/document/privacy-policy/2c19f7a7-c463-48f6-996b-7f463df62319"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Privacy Policy
+                </a>
+                <a
+                  href="https://app.termly.io/document/terms-of-use-for-website/c382a1c7-2bd6-46a6-bb66-e5a67443fadc"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Terms of Service
+                </a>
               </LinksListWrap>
             </LinkContainer>
           </Col>
