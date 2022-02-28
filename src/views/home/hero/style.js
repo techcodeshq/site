@@ -9,7 +9,7 @@ export const HeroWrapper = styled.section`
   flex-direction: column;
   padding-top: 10rem;
 
-  ${media.tablet`padding-top: 14rem;`};
+  ${media.tablet`padding-top: 40vmin;`};
 
   ${media.thone`
     h1 {

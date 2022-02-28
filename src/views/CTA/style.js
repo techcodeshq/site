@@ -47,9 +47,14 @@ export const Card = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 38%;
+  border-radius: 38px;
   background-color: var(--accent);
   height: 10vw;
+
+  ${media.thone`
+    width: 35vw;
+    height: 15vw;
+  `};
 
   img {
     width: 10vw;

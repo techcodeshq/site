@@ -36,6 +36,8 @@ export const NavWrapper = styled.nav`
   justify-content: space-between;
   align-items: center;
   margin-top: 2rem;
+
+  transition: transform 0.35s ease;
 `;
 export const LogoWrapper = styled(Link)`
   text-decoration: none;

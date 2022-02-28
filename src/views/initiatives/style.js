@@ -7,6 +7,8 @@ export const ProjectsWrapper = styled.section`
   min-height: 100vh;
   width: 100%;
   padding: 30vmin 0 10vmin 0;
+
+  ${media.thone`padding-top: 40vmin;`};
 `;
 export const ListWrapper = styled.div`
   display: grid;

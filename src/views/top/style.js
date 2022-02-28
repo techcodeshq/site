@@ -21,10 +21,13 @@ export const SectionWrapper = styled.div`
     font-weight: 600;
 
     ${media.tablet`font-size: 2vw;`};
-    ${media.thone`font-size: 4vw;`};
+    ${media.thone`
+      font-size: 4vw;
+      padding: 1.4vw 4vw;
+    `};
   }
 
-  ${media.tablet`padding-top: 14rem;`};
+  ${media.tablet`padding-top: 40vmin;`};
   ${media.thone`text-align: left;`};
 `;
 export const LargeTitle = styled(TitleText)`
@@ -43,7 +46,7 @@ export const DescriptionWrapper = styled.div`
   max-width: 60%;
 
   ${media.thone`
-    margin: 6vw 0;
+    margin: 6vw 0 10vw;
     max-width: 100%;
   `};
 `;
@@ -51,7 +54,10 @@ export const ImageWrapper = styled.div`
   width: 100vw;
   ${props => props.link !== undefined && `margin-top: 5vw;`};
 
-  ${media.thone`height: 70vh;`};
+  ${media.thone`
+    height: 70vh;
+    margin-top: 10vw;  
+  `};
 `;
 export const HeroImage = styled(GatsbyImage)`
   border-radius: inherit;

@@ -40,7 +40,7 @@ const Bar = ({ location }) => {
   return (
     <HeadStickWrapper data-scroll data-scroll-sticky data-scroll-target="#___sticky">
       <Container default>
-        <NavWrapper>
+        <NavWrapper id="header">
           <LogoWrapper to="/">
             <Icon name="logo" />
           </LogoWrapper>

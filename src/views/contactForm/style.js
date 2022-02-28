@@ -16,7 +16,7 @@ export const ContactSection = styled.section`
     }
   }
 
-  ${media.thone`padding: 60vw 0 20vw 0;`};
+  ${media.thone`padding: 40vmin 0 20vw 0;`};
 `;
 export const GridSplit = styled.div`
   display: flex;
@@ -61,4 +61,4 @@ export const SuccessSubmit = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-`
+`;

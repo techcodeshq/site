@@ -5,6 +5,8 @@ export const HeroSection = styled.section`
   position: relative;
   width: 100%;
   padding-top: 20vmin;
+
+  ${media.thone`padding-top: 40vmin;`};
 `;
 export const SectionTitle = styled(TitleText)`
   color: var(--text);

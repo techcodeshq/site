@@ -88,6 +88,9 @@ const GlobalStyle = createGlobalStyle`
   p {
     line-height: 160%;
   }
+  html[data-direction="down"][data-at-top="false"] #header {
+    transform: translateY(-180%);
+  }
   img {
     user-select: none;
     -webkit-user-drag: none;
