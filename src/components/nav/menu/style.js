@@ -34,6 +34,7 @@ export const SlideContainer = styled.div`
   justify-content: space-between;
   position: absolute;
   top: 50%;
+  overflow-y: scroll;
   transform: translateY(-50%);
   ${media.tablet`
     position: relative;
