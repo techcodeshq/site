@@ -54,4 +54,5 @@ export const ImageTwo = styled(ImageBase)`
   z-index: 1;
   margin-left: 45%;
   margin-top: -80%;
+  position: relative;
 `;
