@@ -4,13 +4,13 @@ import { Initiatives, Footer } from "@views";
 import { graphql } from "gatsby";
 
 const InitiativesPage = ({ data }) => {
-  const doc = data.allStrapiInitiatives.nodes;
+  const doc = data.allStrapiInitiatives.edges.slice(0, 1).pop();
   const footerDoc = data.allStrapiGlobal.edges.slice(0, 1).pop();
 
   return (
     <>
       <Helmet title="Initiatives" />
-      <Initiatives data={doc} />
+      <Initiatives data={doc.node.article} />
       <Footer data={footerDoc.node} />
     </>
   );
@@ -35,14 +35,18 @@ export const query = graphql`
       }
     }
     allStrapiInitiatives(sort: { fields: strapiId, order: DESC }) {
-      nodes {
-        slug
-        title
-        thumbnail {
-          alternativeText
-          localFile {
-            childImageSharp {
-              gatsbyImageData
+      edges {
+        node {
+          article {
+            slug
+            title
+            thumbnail {
+              alternativeText
+              localFile {
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
             }
           }
         }

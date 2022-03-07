@@ -11,6 +11,19 @@ export const ContentWrap = styled.div`
   grid-template-columns: auto 70%;
   grid-gap: 4vw;
   margin-top: 4vw;
+
+  ul {
+    padding: 0;
+
+    li {
+      font-size: 1.5vw;
+      line-height: 160%;
+
+      ${media.tablet`font-size: 2vw;`};
+      ${media.thone`font-size: 4vw;`};
+    }
+  }
+
   ${media.thone`
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;

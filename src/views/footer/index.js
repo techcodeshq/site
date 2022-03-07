@@ -85,7 +85,7 @@ const Footer = ({ data }) => {
                 <Link to="/partner">Partner</Link>
                 <Link to="/initiatives">Initiatives</Link>
                 <Link to="/volunteer">Volunteer</Link>
-                <Link to="/contact">Conatct</Link>
+                <Link to="/contact">Contact</Link>
               </LinksListWrap>
               <LinksListWrap>
                 <LabelText>Legal</LabelText>

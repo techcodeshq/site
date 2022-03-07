@@ -8,10 +8,10 @@ const Project = ({ pageContext }) => {
 
   return (
     <>
-      <Helmet title={project.SEO.title}>
-        <meta name="description" content={project.SEO.description} />
-        <meta property="og:description" content={project.SEO.description} />
-        <meta name="twitter:description" content={project.SEO.description} />
+      <Helmet title={project.seo.title}>
+        <meta name="description" content={project.seo.description} />
+        <meta property="og:description" content={project.seo.description} />
+        <meta name="twitter:description" content={project.seo.description} />
       </Helmet>
 
       <Hero data={project} />

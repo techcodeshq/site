@@ -6,23 +6,47 @@ exports.createPages = async ({ graphql, actions }) => {
   const pages = await graphql(`
     {
       allStrapiInitiatives(sort: { fields: strapiId, order: DESC }) {
-        nodes {
-          slug
-          SEO {
-            title
-            description
-          }
-          title
-          thumbnail {
-            alternativeText
-            localFile {
-              childImageSharp {
-                gatsbyImageData
+        edges {
+          node {
+            article {
+              slug
+              seo {
+                title
+                description
+              }
+              title
+              thumbnail {
+                alternativeText
+                localFile {
+                  childImageSharp {
+                    gatsbyImageData
+                  }
+                }
+              }
+              date(formatString: "MM/DD/YY")
+              links {
+                link
+                text
+              }
+              subheading {
+                text
+              }
+              text {
+                text
+              }
+              images {
+                split
+                images {
+                  alternativeText
+                  localFile {
+                    childImageSharp {
+                      gatsbyImageData
+                    }
+                  }
+                }
               }
             }
           }
-          date(formatString: "MM/DD/YY")
-          article
         }
       }
       allStrapiGlobal {
@@ -43,8 +67,9 @@ exports.createPages = async ({ graphql, actions }) => {
   `);
 
   const footerDoc = pages.data.allStrapiGlobal.edges.slice(0, 1).pop();
+  const doc = pages.data.allStrapiInitiatives.edges.slice(0, 1).pop().node;
 
-  pages.data.allStrapiInitiatives.nodes.forEach(node => {
+  doc.article.forEach(node => {
     createPage({
       path: `/${node.slug}`,
       component: path.resolve(__dirname, "src/templates/project.js"),
