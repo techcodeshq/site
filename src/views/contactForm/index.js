@@ -16,7 +16,7 @@ const ContactSchema = Yup.object().shape({
 
 const ContactForm = () => {
   const [success, setSuccess] = useState(false);
-
+  
   return (
     <ContactSection>
       <Container>
@@ -62,11 +62,14 @@ const ContactForm = () => {
                     method: "POST",
                     headers: {
                       "content-type": "application/json",
-                      authorization: process.env.CONTACT_FORM_API,
+                      authorization: process.env.GATSBY_CONTACT_FORM_API,
                     },
                     body: JSON.stringify(body),
                   })
-                    .then(() => setSuccess(true))
+                    .then(resp => {
+                      setSuccess(true);
+                      console.log(resp);
+                    })
                     .catch(err => alert(err));
 
                   setSubmitting(false);
