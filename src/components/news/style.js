@@ -1,5 +1,5 @@
-import { SmallText } from "@styles";
 import styled from "styled-components";
+import { SmallText } from "@styles";
 
 export const NewsBar = styled.div`
   background-color: var(--theme);

@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import media from "./media";
 
 // https://github.com/necolas/normalize.css
 const normalize = `
