@@ -4,13 +4,17 @@ import { NewsBar, Description, CloseButton, ContentWrapper } from "./style";
 import Icon from "../icon";
 
 const News = () => {
-  const [closed, setClosed] = useState(localStorage.getItem("closed"));
+  const [closed, setClosed] = useState(false);
   const [clicked, setClicked] = useState(false);
 
   useEffect(() => {
-    if (clicked) {
-      localStorage.setItem("closed", true);
-      setClosed(true);
+    if (typeof window !== "undefined") {
+      if (clicked) {
+        localStorage.setItem("closed", true);
+        setClosed(true);
+      } else {
+        setClosed(localStorage.getItem("closed"));
+      }
     }
   }, [clicked]);
 
