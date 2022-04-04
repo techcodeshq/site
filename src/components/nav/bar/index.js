@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Container } from "@styles";
-import { Icon, Button } from "@components";
+import { Icon, Button, News } from "@components";
 import Menu from "../menu";
 import {
   HeadStickWrapper,
@@ -39,6 +39,7 @@ const Bar = ({ location }) => {
 
   return (
     <HeadStickWrapper data-scroll data-scroll-sticky data-scroll-target="#___sticky">
+      <News />
       <Container default>
         <NavWrapper id="header">
           <LogoWrapper to="/">

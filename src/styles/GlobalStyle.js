@@ -89,7 +89,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 160%;
   }
   html[data-direction="down"][data-at-top="false"] #header {
-    transform: translateY(-180%);
+    transform: translateY(-220%);
   }
   img {
     user-select: none;
