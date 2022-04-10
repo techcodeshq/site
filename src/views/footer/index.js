@@ -40,12 +40,8 @@ const Footer = ({ data }) => {
       scrub: true,
     });
 
-    // for some reason this delay has to be here
-    // or else it calculates the height wrong
-    setTimeout(() => {
-      ScrollTrigger.addEventListener("refresh", () => window.scroll.update());
-      ScrollTrigger.refresh();
-    }, 5000);
+    ScrollTrigger.addEventListener("refresh", () => window.scroll.update());
+    ScrollTrigger.refresh();
   }, []);
 
   return (

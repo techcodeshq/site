@@ -5,6 +5,14 @@ import { Head, Nav, SmoothScroll } from "@components";
 import { GlobalStyle } from "@styles";
 
 const Layout = ({ children, location }) => {
+  // we need to do this because for some reason it calculates the wrong height
+  // initially (probably because of the dynamic height of the FAQ section)
+  setTimeout(() => {
+    if (window !== "undefined") {
+      window.scroll.scroll.update();
+    }
+  }, 2000);
+
   return (
     <StaticQuery
       query={graphql`
