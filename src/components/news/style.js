@@ -30,6 +30,7 @@ export const Description = styled(SmallText)`
 `;
 export const CloseButton = styled.button`
   display: flex;
+  color: var(--alwayswhite);
 
   svg {
     width: 16px;
