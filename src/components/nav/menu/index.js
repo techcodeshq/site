@@ -72,10 +72,12 @@ const Menu = ({ menuOpen, toggleMenu, location }) => {
     if (menuOpen) {
       if (window !== "undefined") {
         window.scroll.stop();
+        document.body.style.overflow = "hidden";
       }
     } else {
       if (window !== "undefined") {
         window.scroll.start();
+        document.body.style.overflow = "unset";
       }
     }
   }, [menuOpen]);
